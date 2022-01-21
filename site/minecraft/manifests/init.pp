@@ -6,7 +6,7 @@ class minecraft {
   }
   file {"{$install_dir}/server.jar":
     ensure => file,
-    source => 'https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar',
+    source => $url,
     before => Service['minecraft'],
   }
   package {'java':
